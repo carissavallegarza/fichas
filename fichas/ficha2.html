@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha 2 — El Espíritu Santo en el Antiguo Testamento | Pneumatología · Palma</title>
+
+<style>
+:root{
+    --azul:#1a3a5c;--azul-med:#2e6da4;--azul-cl:#dbeafe;
+    --dorado:#b8860b;--dorado-cl:#fef9ec;
+    --verde:#1a6b3c;--verde-cl:#e8f5ee;
+    --rojo:#8b1a1a;--rojo-cl:#fce8e8;
+    --morado:#6d28d9;--morado-cl:#f5f3ff;
+    --borde:#d1d5db;--txt:#1f2937;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#eef2f7;color:var(--txt);line-height:1.65}
+  header{background:linear-gradient(135deg,var(--azul),#2c5282);color:#fff;padding:1.8rem 1.5rem 1.3rem;text-align:center;border-bottom:4px solid var(--dorado)}
+  header h1{font-size:1.45rem;font-weight:700;margin-bottom:.25rem}
+  header h2{font-size:.88rem;opacity:.85;font-weight:400}
+  .meta{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin-top:.6rem}
+  .meta-badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:.72rem;font-weight:600;padding:.2rem .65rem;border-radius:20px}
+  .meta-badge.gold{background:var(--dorado);border-color:var(--dorado)}
+  main{max-width:860px;margin:0 auto;padding:1.3rem 1rem 3rem}
+  /* DATOS ALUMNO */
+  .alumno-box{background:#fff;border-radius:10px;border:2px solid var(--azul-med);padding:1rem 1.2rem;margin-bottom:1.4rem;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+  .alumno-box h3{color:var(--azul);font-size:.9rem;font-weight:700;margin-bottom:.7rem}
+  .alumno-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.7rem}
+  .alumno-grid label{font-size:.78rem;font-weight:600;color:#374151;display:flex;flex-direction:column;gap:.25rem}
+  .alumno-grid input{border:1.5px solid var(--borde);border-radius:6px;padding:.38rem .6rem;font-family:inherit;font-size:.84rem;color:var(--txt)}
+  .alumno-grid input:focus{outline:none;border-color:var(--azul-med);background:#eff6ff}
+  /* INSTRUCCIONES */
+  .instruc{background:#fff;border-left:5px solid var(--azul-med);border-radius:0 8px 8px 0;padding:.8rem 1rem;margin-bottom:1.2rem;font-size:.83rem;color:#374151}
+  .instruc strong{color:var(--azul)}
+  .instruc ul{padding-left:1.1rem;margin-top:.3rem}
+  .instruc li{margin-bottom:.2rem}
+  /* SECCIONES */
+  .sec{margin-bottom:1.2rem;border-radius:9px;overflow:hidden;border:1px solid var(--borde)}
+  .sec-tit{display:flex;align-items:center;justify-content:space-between;padding:.6rem 1rem;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px}
+  .sec-tit .ico{font-size:.95rem;margin-right:.3rem}
+  .pts{background:rgba(255,255,255,.22);color:#fff;font-size:.67rem;font-weight:700;padding:.1rem .4rem;border-radius:12px}
+  .sec-body{padding:.9rem 1.1rem}
+  .s-vf .sec-tit{background:var(--rojo);color:#fff}
+  .s-vf{background:var(--rojo-cl);border-color:#f9a0a0}
+  .s-comp .sec-tit{background:var(--morado);color:#fff}
+  .s-comp{background:var(--morado-cl);border-color:#c4b5fd}
+  .s-preg .sec-tit{background:var(--verde);color:#fff}
+  .s-preg{background:var(--verde-cl);border-color:#6ee7a0}
+  /* V/F */
+  .vf-item{display:flex;align-items:flex-start;gap:.6rem;background:#fff;border:1px solid var(--borde);border-radius:8px;padding:.55rem .9rem;margin-bottom:.45rem;font-size:.86rem}
+  .vf-n{flex-shrink:0;background:#dbeafe;color:#1e40af;font-weight:800;font-size:.71rem;min-width:24px;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-top:.05rem}
+  .vf-texto{flex:1;line-height:1.5}
+  .vf-ops{display:flex;gap:.45rem;margin-top:.35rem;flex-wrap:wrap}
+  .rlbl{display:flex;align-items:center;gap:.28rem;font-size:.81rem;cursor:pointer;background:#f9fafb;border:1px solid #e5e7eb;border-radius:20px;padding:.18rem .65rem;user-select:none;transition:background .15s}
+  .rlbl:hover{background:#e0f2fe}
+  .rlbl input{accent-color:var(--azul-med);cursor:pointer}
+  /* COMPLETAR */
+  .comp-item{background:#fff;border:1px solid var(--borde);border-radius:8px;padding:.55rem .9rem;margin-bottom:.45rem;font-size:.86rem;line-height:2.2}
+  .linea{border:none;border-bottom:2px solid var(--azul-med);background:transparent;font-size:.86rem;font-family:inherit;color:var(--azul-med);padding:.05rem .3rem;min-width:120px;outline:none;transition:all .2s}
+  .linea:focus{background:#eff6ff;border-radius:3px 3px 0 0;border-bottom-color:var(--verde)}
+  .linea::placeholder{color:#9ca3af;font-style:italic;font-size:.8rem}
+  /* PREGUNTAS ABIERTAS */
+  .preg-item{background:#fff;border-left:4px solid var(--verde);border-radius:0 8px 8px 0;padding:.55rem .9rem;margin-bottom:.75rem;font-size:.86rem}
+  .preg-num{font-weight:700;color:var(--verde);margin-right:.25rem}
+  .preg-lbl{display:block;font-size:.71rem;font-weight:700;color:var(--verde);text-transform:uppercase;letter-spacing:.5px;margin-top:.45rem}
+  .preg-ta{width:100%;margin-top:.3rem;border:1.5px solid var(--borde);border-radius:7px;padding:.5rem .7rem;font-family:inherit;font-size:.85rem;resize:vertical;min-height:76px;background:#fafafa;transition:border-color .2s}
+  .preg-ta:focus{outline:none;border-color:var(--azul-med);background:#fff}
+  .preg-ta::placeholder{color:#9ca3af;font-style:italic}
+  /* BOTONES */
+  .btn-row{display:flex;justify-content:center;gap:1rem;margin-top:1.8rem;flex-wrap:wrap}
+  .btn{padding:.65rem 1.6rem;border-radius:30px;font-size:.88rem;font-weight:700;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .btn-print{background:linear-gradient(135deg,var(--azul),#2c5282);color:#fff;box-shadow:0 3px 10px rgba(26,58,92,.3)}
+  .btn-print:hover{transform:translateY(-2px);box-shadow:0 5px 15px rgba(26,58,92,.35)}
+  footer{text-align:center;padding:1.1rem;font-size:.74rem;color:#6b7280;background:#fff;border-top:1px solid var(--borde);margin-top:1.5rem}
+  @media(max-width:600px){.alumno-grid{grid-template-columns:1fr}}
+  @media print{.btn-row{display:none} body{background:#fff} .sec{page-break-inside:avoid}}
+
+  :root {
+    --azul: #1a3a5c; --azul-med: #2e6da4; --azul-claro: #dbeafe;
+    --dorado: #b8860b; --dorado-claro: #fef9ec;
+    --verde: #1a6b3c; --verde-claro: #e8f5ee;
+    --rojo: #8b1a1a; --rojo-claro: #fce8e8;
+    --gris: #f4f6f8; --borde: #d1d5db; --texto: #1f2937;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #eef2f7; color: var(--texto); line-height: 1.6; }
+  header { background: linear-gradient(135deg, var(--azul) 0%, #2c5282 100%); color: white; padding: 2rem 1.5rem 1.5rem; text-align: center; border-bottom: 4px solid var(--dorado); }
+  header h1 { font-size: 1.7rem; font-weight: 700; margin-bottom: .4rem; }
+  header h2 { font-size: 1rem; font-weight: 400; opacity: .85; }
+  header p { font-size: .82rem; margin-top: .5rem; opacity: .7; }
+  nav { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: center; padding: 1rem; background: white; border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+  nav a { background: var(--azul-claro); color: var(--azul); text-decoration: none; padding: .35rem .7rem; border-radius: 20px; font-size: .78rem; font-weight: 600; border: 1px solid #93c5fd; transition: all .2s; }
+  nav a:hover { background: var(--azul-med); color: white; }
+  main { max-width: 960px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+  .ficha { background: white; border-radius: 12px; margin-bottom: 2.5rem; box-shadow: 0 2px 12px rgba(0,0,0,.08); overflow: hidden; border: 1px solid var(--borde); }
+  .ficha-header { background: linear-gradient(135deg, var(--azul) 0%, #2c5282 100%); color: white; padding: 1.2rem 1.5rem; border-bottom: 3px solid var(--dorado); }
+  .ficha-numero { font-size: .75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; opacity: .8; margin-bottom: .2rem; }
+  .ficha-titulo { font-size: 1.3rem; font-weight: 700; margin-bottom: .2rem; }
+  .ficha-subtitulo { font-size: .85rem; opacity: .8; }
+  .ficha-paginas { display: inline-block; background: var(--dorado); color: white; font-size: .72rem; font-weight: 700; padding: .2rem .6rem; border-radius: 20px; margin-top: .5rem; }
+  .ficha-body { padding: 1.5rem; }
+  .seccion { margin-bottom: 1.5rem; border-radius: 8px; overflow: hidden; border: 1px solid var(--borde); }
+  .seccion-titulo { display: flex; align-items: center; gap: .5rem; padding: .65rem 1rem; font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .seccion-titulo .icono { font-size: 1rem; }
+  .seccion-cuerpo { padding: 1rem 1.2rem; font-size: .9rem; }
+  .s-idea { background: var(--azul-claro); border-color: #93c5fd; }
+  .s-idea .seccion-titulo { background: var(--azul-med); color: white; }
+  .s-conceptos { background: var(--dorado-claro); border-color: #f0d070; }
+  .s-conceptos .seccion-titulo { background: var(--dorado); color: white; }
+  .s-preguntas { background: var(--verde-claro); border-color: #6ee7a0; }
+  .s-preguntas .seccion-titulo { background: var(--verde); color: white; }
+  .s-evaluacion { background: var(--rojo-claro); border-color: #f9a0a0; }
+  .s-evaluacion .seccion-titulo { background: var(--rojo); color: white; }
+  .s-mapa { background: var(--gris); border-color: #c5cdd8; }
+  .s-mapa .seccion-titulo { background: #475569; color: white; }
+  .conceptos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: .7rem; margin-top: .5rem; }
+  .concepto-card { background: white; border: 1px solid var(--borde); border-radius: 8px; padding: .7rem .9rem; }
+  .concepto-termino { font-weight: 700; color: var(--dorado); font-size: .85rem; }
+  .concepto-def { font-size: .82rem; color: #4b5563; margin-top: .2rem; }
+  .pregunta { background: white; border-left: 4px solid var(--verde); padding: .6rem .9rem; margin-bottom: .8rem; border-radius: 0 6px 6px 0; font-size: .88rem; }
+  .pregunta-num { font-weight: 700; color: var(--verde); margin-right: .3rem; }
+  .label-respuesta { display: block; font-size: .74rem; font-weight: 700; color: var(--verde); text-transform: uppercase; letter-spacing: .5px; margin-top: .5rem; }
+  .textarea-respuesta { width: 100%; margin-top: .4rem; border: 1.5px solid var(--borde); border-radius: 8px; padding: .6rem .8rem; font-family: inherit; font-size: .87rem; color: var(--texto); resize: vertical; min-height: 70px; transition: border-color .2s; background: #fafafa; }
+  .textarea-respuesta:focus { outline: none; border-color: var(--azul-med); background: white; }
+  .textarea-respuesta::placeholder { color: #9ca3af; font-style: italic; }
+  /* VF */
+  .vf-item { background: white; border: 1px solid var(--borde); border-radius: 8px; padding: .65rem .9rem; margin-bottom: .5rem; font-size: .87rem; }
+  .vf-texto { flex: 1; }
+  .vf-botones { display: flex; gap: .4rem; margin-top: .4rem; flex-wrap: wrap; }
+  .btn-vf { padding: .25rem .7rem; border-radius: 20px; font-size: .75rem; font-weight: 700; border: 2px solid transparent; cursor: pointer; transition: all .15s; }
+  .btn-vf-v { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+  .btn-vf-f { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+  .btn-vf-v:hover:not(:disabled) { background: #6ee7b7; }
+  .btn-vf-f:hover:not(:disabled) { background: #fca5a5; }
+  .btn-vf.sel-correcto { background: #059669 !important; color: white !important; border-color: #059669 !important; }
+  .btn-vf.sel-incorrecto { background: #dc2626 !important; color: white !important; border-color: #dc2626 !important; }
+  .btn-vf.mostrar-correcto { outline: 3px solid #059669; }
+  .vf-feedback { font-size: .75rem; margin-top: .3rem; font-weight: 600; padding: .2rem .5rem; border-radius: 4px; display: none; }
+  .fb-ok { background: #d1fae5; color: #065f46; }
+  .fb-no { background: #fee2e2; color: #991b1b; }
+  /* Completar */
+  .completar-item { background: white; border: 1px solid var(--borde); border-radius: 8px; padding: .65rem .9rem; margin-bottom: .5rem; font-size: .87rem; line-height: 2.2; }
+  .campo { border: none; border-bottom: 2px solid var(--azul-med); background: transparent; font-size: .87rem; font-family: inherit; color: var(--azul); padding: .1rem .3rem; min-width: 110px; outline: none; transition: border-color .2s; }
+  .campo:focus { border-bottom-color: var(--verde); background: #f0fdf4; border-radius: 4px 4px 0 0; }
+  .campo::placeholder { color: #9ca3af; font-style: italic; }
+  /* Mapa */
+  .mapa { font-size: .85rem; }
+  .mapa-nodo-principal { background: var(--azul); color: white; padding: .5rem 1rem; border-radius: 8px; font-weight: 700; text-align: center; margin-bottom: .5rem; }
+  .mapa-rama { border-left: 3px solid var(--azul-med); margin-left: .5rem; padding-left: 1rem; margin-bottom: .4rem; }
+  .mapa-subnodo { background: var(--azul-claro); color: var(--azul); padding: .35rem .7rem; border-radius: 6px; font-weight: 600; margin-bottom: .3rem; display: inline-block; }
+  .mapa-hoja { font-size: .8rem; color: #4b5563; padding-left: .5rem; }
+  /* Versículos */
+  .versiculo { background: #fffbeb; border-left: 4px solid var(--dorado); padding: .5rem .9rem; margin-bottom: .4rem; border-radius: 0 6px 6px 0; font-size: .85rem; font-style: italic; }
+  .versiculo-ref { font-style: normal; font-weight: 700; color: var(--dorado); }
+  /* Tabla */
+  .tabla-rel { width: 100%; border-collapse: collapse; font-size: .85rem; }
+  .tabla-rel th { background: var(--azul); color: white; padding: .5rem; border: 1px solid #ddd; }
+  .tabla-rel td { padding: .5rem; border: 1px solid #ddd; }
+  .tabla-rel tr:nth-child(even) { background: #f9fafb; }
+  /* Resumen */
+  .resumen-box { background: linear-gradient(135deg, var(--verde-claro), #f0fdf4); border: 2px solid var(--verde); border-radius: 10px; padding: 1rem 1.2rem; margin-top: 1rem; }
+  .resumen-box h4 { color: var(--verde); margin-bottom: .5rem; font-size: .9rem; }
+  /* Score */
+  .score-tag { display: none; align-items: center; gap: .4rem; background: var(--dorado-claro); border: 1.5px solid var(--dorado); border-radius: 20px; padding: .3rem .8rem; font-size: .78rem; font-weight: 700; color: var(--dorado); margin-top: .6rem; }
+  /* Progress */
+  .barra-global { background: white; border-bottom: 1px solid var(--borde); padding: .6rem 1rem; text-align: center; font-size: .8rem; color: var(--azul); font-weight: 600; }
+  .pb-wrap { background: #e5e7eb; border-radius: 10px; height: 8px; max-width: 400px; margin: .4rem auto 0; }
+  .pb { height: 8px; border-radius: 10px; background: var(--verde); transition: width .4s; width: 0; }
+  footer { text-align: center; padding: 1.5rem; font-size: .78rem; color: #6b7280; background: white; border-top: 1px solid var(--borde); }
+  @media(max-width:600px){ header h1{font-size:1.3rem} .ficha-titulo{font-size:1.1rem} .conceptos-grid{grid-template-columns:1fr 1fr} .campo{min-width:80px} }
+  @media print{ nav,.barra-global,.btn-vf,.vf-botones{display:none} .ficha{page-break-inside:avoid} body{background:white} }
+</style>
+
+
+</head>
+<body>
+
+<form id="miFormulario" action="https://docs.google.com/forms/d/e/1FAIpQLSdggKtMgLW1NITr40ViQz62LlepxJe261OTaXV-Ey_41xmqhg/formResponse" method="GET" target="_blank">
+
+<header>
+  <h1>📝 Evaluación Ficha 2 — El Espíritu Santo en el Antiguo Testamento</h1>
+  <h2><em>El Espíritu Santo: Una perspectiva pentecostal</em> — Anthony D. Palma · Editorial Vida, 2005</h2>
+  <div class="meta">
+    <span class="meta-badge">Ficha 2 de 8</span>
+    <span class="meta-badge">Pneumatología General</span>
+    <span class="meta-badge gold">📄 Págs. 33–53</span>
+    <span class="meta-badge">⭐ 30 puntos</span>
+  </div>
+</header>
+<main>
+
+<div class="alumno-box">
+  <h3>📋 Datos del estudiante</h3>
+  <div class="alumno-grid">
+    <label>Nombre completo<input type="text" name="entry.366340186" placeholder="Escribe tu nombre completo" id="nombre" required></label>
+    <label>Fecha<input type="date" name="entry.2105359760" id="fecha" required></label>
+  </div>
+</div>
+
+    <div class="seccion s-idea"><div class="seccion-titulo s-idea"><span class="icono">💡</span> Idea Central</div><div class="seccion-cuerpo">En el AT el Espíritu actúa selectivamente y de forma transitoria sobre personas elegidas para tareas específicas: creación, liderazgo civil-militar, profecía y habilidades artísticas. Jesús es el receptor supremo del Espíritu —sin medida y de forma permanente— y el paradigma para sus seguidores.</div></div>
+    <div class="seccion s-conceptos"><div class="seccion-titulo s-conceptos"><span class="icono">📌</span> Conceptos Clave</div><div class="seccion-cuerpo"><div class="conceptos-grid">
+      <div class="concepto-card"><div class="concepto-termino">Espíritu en la Creación</div><div class="concepto-def">Gn 1:2: participa activo en la creación y sustento del universo (Job 33:4; Sal 33:6).</div></div>
+      <div class="concepto-card"><div class="concepto-termino">Unción de líderes</div><div class="concepto-def">Jueces, reyes y profetas recibían el Espíritu para tareas concretas: valor militar, sabiduría, profecía.</div></div>
+      <div class="concepto-card"><div class="concepto-termino">Profecía en el AT</div><div class="concepto-def">Incluye predicción, pero es más ampliamente proclamación inspirada (1 S 10:10).</div></div>
+      <div class="concepto-card"><div class="concepto-termino">Democratización futura</div><div class="concepto-def">Joel 2:28–29: promesa de derramamiento universal cumplida en Pentecostés (Hch 2:17).</div></div>
+      <div class="concepto-card"><div class="concepto-termino">Mesías / Cristo</div><div class="concepto-def">«El Ungido». El Espíritu reposa sobre él permanentemente y sin medida (Jn 3:34; Is 61:1–2).</div></div>
+      <div class="concepto-card"><div class="concepto-termino">Shequiná</div><div class="concepto-def">Manifestación visible de la gloria-presencia de Dios; el Espíritu es el medio por el que Dios da a conocer su presencia.</div></div>
+    </div></div></div>
+    <div class="seccion s-idea"><div class="seccion-titulo s-idea"><span class="icono">📖</span> Versículos Clave</div><div class="seccion-cuerpo">
+      <div class="versiculo"><span class="versiculo-ref">Gn 1:2 —</span> «El Espíritu de Dios iba y venía sobre la superficie de las aguas.»</div>
+      <div class="versiculo"><span class="versiculo-ref">Jl 2:28 —</span> «Derramaré mi Espíritu sobre todo el género humano.»</div>
+      <div class="versiculo"><span class="versiculo-ref">Is 61:1 —</span> «El Espíritu del SEÑOR omnipotente está sobre mí, por cuanto me ha ungido para anunciar buenas nuevas.»</div>
+      <div class="versiculo"><span class="versiculo-ref">Nm 11:29 —</span> «¡Cómo quisiera que todo el pueblo del SEÑOR profetizara!»</div>
+    </div></div>
+    <div class="seccion s-mapa"><div class="seccion-titulo s-mapa"><span class="icono">🗺️</span> Mapa Conceptual — El Espíritu en el AT</div><div class="seccion-cuerpo mapa">
+      <div class="mapa-nodo-principal">OBRAS DEL ESPÍRITU EN EL ANTIGUO TESTAMENTO</div>
+      <div class="mapa-rama"><div class="mapa-subnodo">🌍 Creación</div><div class="mapa-hoja">Gn 1:2 · Job 33:4 · Sal 33:6 — Participa en crear y sustentar la vida</div></div>
+      <div class="mapa-rama"><div class="mapa-subnodo">🏛️ Liderazgo / Servicio</div><div class="mapa-hoja">Jueces · Moisés · Josué — Fuerza, sabiduría, administración para tareas de Dios</div></div>
+      <div class="mapa-rama"><div class="mapa-subnodo">📣 Profecía</div><div class="mapa-hoja">Nm 11:25–26 · 1 S 10:10 — Señal de que el Espíritu vino sobre el individuo</div></div>
+      <div class="mapa-rama"><div class="mapa-subnodo">✂️ Limitaciones AT vs. NT</div><div class="mapa-hoja">Solo a elegidos · No permanente · No para todos → NT: permanente, para todos (Ro 8:9)</div></div>
+    </div></div>
+
+
+<div class="instruc">
+  <strong>Capítulos 2-3 · Instrucciones generales:</strong> Completa cada sección según corresponda.
+
+  <ul>
+    <li><strong>Verdadero / Falso:</strong> Selecciona Verdadero o Falso según corresponda.</li>
+    <li><strong>Preguntas abiertas:</strong> Responde con tus propias palabras de forma clara y desarrollada. Consulta tus fichas de lectura antes de responder.
+   Cita pasajes bíblicos cuando sea posible.</li>
+  </ul>
+</div>
+
+
+<div class="sec s-vf">
+  <div class="sec-tit"><span><span class="ico">✅</span> Verdadero o Falso — Marca tu respuesta</span><span class="pts">5 pts · 1 pt c/u</span></div>
+  <div class="sec-body">
+    <div class="vf-item">
+      <span class="vf-n">1</span>
+      <div class="vf-texto">En el AT el Espíritu actuaba sobre personas específicas para tareas concretas, no como posesión permanente de todos.
+        <div class="vf-ops">
+          <label class="rlbl"><input type="radio" name="entry.145754100" value="Verdadero"> Verdadero</label>
+          <label class="rlbl"><input type="radio" name="entry.145754100" value="Falso"> Falso</label>
+        </div>
+      </div>
+    </div>
+    <div class="vf-item">
+      <span class="vf-n">2</span>
+      <div class="vf-texto">La profecía en el AT siempre incluía predicción del futuro como elemento esencial.
+        <div class="vf-ops">
+          <label class="rlbl"><input type="radio" name="entry.1353379236" value="Verdadero"> Verdadero</label>
+          <label class="rlbl"><input type="radio" name="entry.1353379236" value="Falso"> Falso</label>
+        </div>
+      </div>
+    </div>
+    <div class="vf-item">
+      <span class="vf-n">3</span>
+      <div class="vf-texto">La unción con aceite en el AT simbolizaba la elección y equipamiento del Espíritu Santo para el liderazgo.
+        <div class="vf-ops">
+          <label class="rlbl"><input type="radio" name="entry.1180979523" value="Verdadero"> Verdadero</label>
+          <label class="rlbl"><input type="radio" name="entry.1180979523" value="Falso"> Falso</label>
+        </div>
+      </div>
+    </div>
+    <div class="vf-item">
+      <span class="vf-n">4</span>
+      <div class="vf-texto">Jesús recibió el Espíritu Santo en medida limitada al igual que los creyentes del NT.
+        <div class="vf-ops">
+          <label class="rlbl"><input type="radio" name="entry.1875080911" value="Verdadero"> Verdadero</label>
+          <label class="rlbl"><input type="radio" name="entry.1875080911" value="Falso"> Falso</label>
+        </div>
+      </div>
+    </div>
+    <div class="vf-item">
+      <span class="vf-n">5</span>
+      <div class="vf-texto">Joel 2:28–29 anticipa el derramamiento universal del Espíritu, cumplido en Pentecostés según Pedro (Hch 2).
+        <div class="vf-ops">
+          <label class="rlbl"><input type="radio" name="entry.589322328" value="Verdadero"> Verdadero</label>
+          <label class="rlbl"><input type="radio" name="entry.589322328" value="Falso"> Falso</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="sec s-preg">
+  <div class="sec-tit"><span><span class="ico">❓</span> Preguntas de Comprensión y Reflexión</span><span class="pts">25 pts · 5 pts c/u</span></div>
+  <div class="sec-body">
+    <div class="preg-item">
+      <span class="preg-num">1.</span>¿Cuáles son las dos características principales que distinguen la pneumatología del AT de la del NT, según Palma?
+      <label class="preg-lbl">✏️ Tu respuesta:</label>
+      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1330875832" required></textarea>
+    </div>
+    <div class="preg-item">
+      <span class="preg-num">2.</span>Explique la variedad de expresiones usadas en el AT para describir cómo el Espíritu contactaba a los individuos. ¿Cuál es la más frecuente?
+      <label class="preg-lbl">✏️ Tu respuesta:</label>
+      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1586841030" required></textarea>
+    </div>
+    <div class="preg-item">
+      <span class="preg-num">3.</span>¿Qué enseña el episodio de Moisés y los setenta ancianos (Nm 11) sobre la soberanía y omnipresencia del Espíritu?
+      <label class="preg-lbl">✏️ Tu respuesta:</label>
+      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1801194589" required></textarea>
+    </div>
+    <div class="preg-item">
+      <span class="preg-num">4.</span>¿Cómo se relaciona la unción de Jesús en el bautismo con su ministerio terrenal y qué significa que Jesús es «el modelo» para los creyentes?
+      <label class="preg-lbl">✏️ Tu respuesta:</label>
+      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1028039348" required></textarea>
+    </div>
+    <div class="preg-item">
+      <span class="preg-num">5.</span>¿Qué significa que el Espíritu está «subordinado» al Padre y al Hijo sin ser «inferior» a ellos?
+      <label class="preg-lbl">✏️ Tu respuesta:</label>
+      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.345088174" required></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="resumen-box"><h4>🎯 Fijación de Aprendizaje</h4>En el AT el Espíritu actúa selectivamente y de forma transitoria. En el NT toda carne puede recibir el Espíritu. Jesús —ungido sin medida— es el paradigma: como el Espíritu descendió sobre él para el ministerio, así descendería sobre sus seguidores.</div>
+  </div>
+
+
+<div class="btn-row">
+  <button id="btnEnviar" type="submit" class="btn btn-print">📤 Enviar evaluación</button>
+</div>
+
+</main>
+</form>
+
+<script>
+document.getElementById("miFormulario").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const data = new FormData(this);
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSdggKtMgLW1NITr40ViQz62LlepxJe261OTaXV-Ey_41xmqhg/formResponse", {
+    method: "POST",
+    mode: "no-cors",
+    body: data
+  });
+
+  alert("✅ Evaluación enviada correctamente");
+  this.reset();
+
+});
+</script>
+
+<footer>
+  <p><strong>Ficha 2 de 8 — Evaluación Pneumatología Avanzada</strong> · <em>El Espíritu Santo</em> · Anthony D. Palma · Editorial Vida, 2005</p>
+  <p>Sección: Pneumatología General · Págs. 33–53 · Total: 30 puntos</p>
+</footer>
+</body>
+</html>

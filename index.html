@@ -170,12 +170,88 @@
   footer { text-align: center; padding: 1.5rem; font-size: .78rem; color: #6b7280; background: white; border-top: 1px solid var(--borde); }
   @media(max-width:600px){ header h1{font-size:1.3rem} .ficha-titulo{font-size:1.1rem} .conceptos-grid{grid-template-columns:1fr 1fr} .campo{min-width:80px} }
   @media print{ nav,.barra-global,.btn-vf,.vf-botones{display:none} .ficha{page-break-inside:avoid} body{background:white} }
+
+   /* CONTENEDOR PRINCIPAL */
+.plataforma {
+  background: #f4f6fb;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.plataforma:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease;
+}
+
+/* HEADER */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 14px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+}
+
+.form-header h3 {
+  margin: 5px 0 0;
+  font-size: 18px;
+}
+
+/* BADGE */
+.badge {
+  background: #e3ecff;
+  color: #2a5bd7;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* PUNTOS */
+.pts {
+  background: #2a5bd7;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* CUERPO */
+.form-body {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TEXTO */
+.instrucciones {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* IFRAME WRAP */
+.iframe-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+/* IFRAME */
+.iframe-wrap iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+ 
 </style>
 
 </head>
 <body>
 
-<form id="miFormulario" action="https://docs.google.com/forms/d/e/1FAIpQLScPPZD7l_UcxXZuloRiCGLZzejglxvtUrUq4TlnaHlMQOqMCQ/formResponse" method="POST">
 
   <input type="hidden" name="fvv" value="1">
   <input type="hidden" name="fbzx" value="1234567890">
@@ -239,115 +315,42 @@
 </div>
 
 
-<div class="sec s-vf">
-  <div class="sec-tit"><span><span class="ico">✅</span> Verdadero o Falso — Marca tu respuesta</span><span class="pts">5 pts · 1 pt c/u</span></div>
-  <div class="sec-body">
-    <div class="vf-item">
-      <span class="vf-n">1</span>
-      <div class="vf-texto">El término griego «pneuma» es neutro en género, pero eso no implica que el Espíritu Santo sea impersonal.
-        <div class="vf-ops">
-          <label class="rlbl"><input type="radio" name="entry.145754100" value="Verdadero"><span>Verdadero</span></label>
-          <label class="rlbl"><input type="radio" name="entry.145754100" value="Falso"> <span>Falso</span></label>
-        </div>
-      </div>
+<div class="sec s-formulario plataforma">
+
+  <div class="form-header">
+    <div class="form-header-left">
+      <span class="badge">Actividad evaluada</span>
+      <h3>📝 Responde la evaluación</h3>
     </div>
-    <div class="vf-item">
-      <span class="vf-n">2</span>
-      <div class="vf-texto">Los Pneumatomacos afirmaban que el Espíritu Santo es igual al Padre en naturaleza divina.
-        <div class="vf-ops">
-          <label class="rlbl"><input type="radio" name="entry.1353379236" value="Verdadero"> <span>Verdadero</span></label>
-          <label class="rlbl"><input type="radio" name="entry.1353379236" value="Falso"> <span>Falso</span></label>
-        </div>
-      </div>
-    </div>
-    <div class="vf-item">
-      <span class="vf-n">3</span>
-      <div class="vf-texto">En Hechos 5:3–4, Pedro equipara mentirle al Espíritu Santo con mentirle a Dios, demostrando la deidad del Espíritu.
-        <div class="vf-ops">
-          <label class="rlbl"><input type="radio" name="entry.1180979523" value="Verdadero"> <span>Verdadero</span></label>
-          <label class="rlbl"><input type="radio" name="entry.1180979523" value="Falso"> <span>Falso</span></label>
-        </div>
-      </div>
-    </div>
-    <div class="vf-item">
-      <span class="vf-n">4</span>
-      <div class="vf-texto">La subordinación funcional del Espíritu al Padre y al Hijo implica que el Espíritu es inferior en esencia divina.
-        <div class="vf-ops">
-          <label class="rlbl"><input type="radio" name="entry.1875080911" value="Verdadero"> <span>Verdadero</span></label>
-          <label class="rlbl"><input type="radio" name="entry.1875080911" value="Falso"> <span>Falso</span></label>
-        </div>
-      </div>
-    </div>
-    <div class="vf-item">
-      <span class="vf-n">5</span>
-      <div class="vf-texto">La fórmula trinitaria de Mateo 28:19 usa «nombre» en singular, reflejando la unidad de las tres personas divinas.
-        <div class="vf-ops">
-          <label class="rlbl"><input type="radio" name="entry.589322328" value="Verdadero"> <span>Verdadero</span></label>
-          <label class="rlbl"><input type="radio" name="entry.589322328" value="Falso"> <span>Falso</span></label>
-        </div>
-      </div>
+    <div class="form-header-right">
+      <span class="pts">30 pts</span>
     </div>
   </div>
+  <div class="form-body">
+    <p class="instrucciones">
+      Completa el siguiente formulario. Tus respuestas se guardarán automáticamente.
+    </p>
+    <div class="iframe-wrap">
+
+      <iframe 
+        src="https://docs.google.com/forms/d/e/1FAIpQLScPPZD7l_UcxXZuloRiCGLZzejglxvtUrUq4TlnaHlMQOqMCQ/viewform"
+        width="100%" 
+        height="900"
+        frameborder="0">
+      </iframe>
+    </div>
+  </div>
+
 </div>
 
-<div class="sec s-preg">
-  <div class="sec-tit"><span><span class="ico">❓</span> Preguntas de Comprensión y Reflexión</span><span class="pts">25 pts · 5 pts c/u</span></div>
-  <div class="sec-body">
-    <div class="preg-item">
-      <span class="preg-num">1.</span>¿Cuáles son las principales evidencias bíblicas que demuestran que el Espíritu Santo es una Persona, no una fuerza impersonal?
-      <label class="preg-lbl">✏️ Tu respuesta:</label>
-      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1330875832" required></textarea>
-    </div>
-    <div class="preg-item">
-      <span class="preg-num">2.</span>¿Qué posición histórica defendieron los Pneumatomacos y por qué fue rechazada por la iglesia?
-      <label class="preg-lbl">✏️ Tu respuesta:</label>
-      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1586841030" required></textarea>
-    </div>
-    <div class="preg-item">
-      <span class="preg-num">3.</span>Explique la controversia del Filioque: ¿qué afirma y qué consecuencias históricas tuvo?
-      <label class="preg-lbl">✏️ Tu respuesta:</label>
-      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1801194589" required></textarea>
-    </div>
-    <div class="preg-item">
-      <span class="preg-num">4.</span>¿En qué sentido el Espíritu Santo está «subordinado» al Padre y al Hijo sin que eso implique inferioridad de naturaleza?
-      <label class="preg-lbl">✏️ Tu respuesta:</label>
-      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.1028039348" required></textarea>
-    </div>
-    <div class="preg-item">
-      <span class="preg-num">5.</span>¿Qué es la «blasfemia contra el Espíritu Santo» y por qué se considera imperdonable según Palma?
-      <label class="preg-lbl">✏️ Tu respuesta:</label>
-      <textarea class="preg-ta" placeholder="Escribe tu respuesta aquí…" rows="4" name="entry.345088174" required></textarea>
-    </div>
-  </div>
-</div>
 
  <div class="resumen-box"><h4>🎯 Fijación de Aprendizaje</h4>El Espíritu Santo es una <strong>Persona divina</strong>: tiene intelecto, emociones y voluntad. Es plenamente Dios, coigual y coeterno con el Padre y el Hijo. Su «subordinación» al Padre y al Hijo es funcional, no ontológica.</div>
   </div>
 
 <div class="btn-row">
-  <button id="btnEnviar" type="submit" class="btn btn-print">📤 Enviar evaluación</button>
 </div>
 
 </main>
-</form>
-
-<script>
-document.getElementById("miFormulario").addEventListener("submit", function(e){
-  e.preventDefault();
-
-  const data = new FormData(this);
-
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLScPPZD7l_UcxXZuloRiCGLZzejglxvtUrUq4TlnaHlMQOqMCQ/formResponse", {
-    method: "POST",
-    mode: "no-cors",
-    body: data
-  });
-
-  alert("✅ Evaluación enviada correctamente");
-  this.reset();
-
-});
-</script>
 
 
 <footer>

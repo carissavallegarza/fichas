@@ -170,13 +170,89 @@
   footer { text-align: center; padding: 1.5rem; font-size: .78rem; color: #6b7280; background: white; border-top: 1px solid var(--borde); }
   @media(max-width:600px){ header h1{font-size:1.3rem} .ficha-titulo{font-size:1.1rem} .conceptos-grid{grid-template-columns:1fr 1fr} .campo{min-width:80px} }
   @media print{ nav,.barra-global,.btn-vf,.vf-botones{display:none} .ficha{page-break-inside:avoid} body{background:white} }
+
+    /* CONTENEDOR PRINCIPAL */
+.plataforma {
+  background: #f4f6fb;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 20px;
+}
+.plataforma:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease;
+}
+
+/* HEADER */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 14px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+}
+
+.form-header h3 {
+  margin: 5px 0 0;
+  font-size: 18px;
+}
+
+/* BADGE */
+.badge {
+  background: #e3ecff;
+  color: #2a5bd7;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* PUNTOS */
+.pts {
+  background: #2a5bd7;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* CUERPO */
+.form-body {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* TEXTO */
+.instrucciones {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* IFRAME WRAP */
+.iframe-wrap {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+/* IFRAME */
+.iframe-wrap iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
 </style>
 
 
 </head>
 <body>
 
-<form id="miFormulario" action="https://docs.google.com/forms/d/e/1FAIpQLSc4jTCY6CAB5GZ2b95aobPvipfOyBu7VCosJHPK2OoYOo_W-g/formResponse" method="GET" target="_blank">
 
 <header>
   <h1>📝 Evaluación Ficha 4 — El Espíritu y la Palabra de Dios</h1>
@@ -223,14 +299,22 @@
   </ul>
 </div>
 
-<div class="sec s-formulario">
-  <div class="sec-tit">
-    <span><span class="ico">📝</span> Responde la evaluación</span>
-    <span class="pts">30 pts</span>
-  </div>
+<div class="sec s-formulario plataforma">
 
-  <div class="sec-body">
-    <p><strong>Instrucciones:</strong> Responde directamente en el formulario.</p>
+  <div class="form-header">
+    <div class="form-header-left">
+      <span class="badge">Actividad evaluada</span>
+      <h3>📝 Responde la evaluación</h3>
+    </div>
+    <div class="form-header-right">
+      <span class="pts">30 pts</span>
+    </div>
+  </div>
+  <div class="form-body">
+    <p class="instrucciones">
+      Completa el siguiente formulario. Tus respuestas se guardarán automáticamente.
+    </p>
+    <div class="iframe-wrap">
 
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSc4jTCY6CAB5GZ2b95aobPvipfOyBu7VCosJHPK2OoYOo_W-g/viewform"
@@ -249,7 +333,6 @@
 </div>
 
 </main>
-</form>
 
 
 
